@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="mall/header::head-fragment('NewBee商城-选择支付方式','pay-select')">
@@ -41,7 +40,7 @@
                                 <img onclick="payOrder(1)" th:src="@{/mall/image/pay/payOnline_zfb.png}" alt="支付宝"
                                      style="margin-left: 0;"></li>
                             <li id="J_weixin">
-                                <input type="radio" name="payOnlineBank" id="alipay" value="alipay">
+                                <input type="radio" name="payOnlineBank" id="wxpay" value="wxpay">
                                 <img onclick="payOrder(2)" th:src="@{/mall/image/pay/weixinpay.png}" alt="微信支付"
                                      style="margin-left: 0;">
                             </li>
