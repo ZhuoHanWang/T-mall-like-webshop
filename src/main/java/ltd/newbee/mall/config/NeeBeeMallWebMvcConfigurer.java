@@ -18,6 +18,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+// 用来解决跨域问题的，这个地方不需要咋管
 @Configuration
 public class NeeBeeMallWebMvcConfigurer implements WebMvcConfigurer {
 

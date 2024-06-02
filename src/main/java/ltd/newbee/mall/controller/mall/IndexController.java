@@ -25,6 +25,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+
+// 这里是整个服务的首页
 @Controller
 public class IndexController {
 

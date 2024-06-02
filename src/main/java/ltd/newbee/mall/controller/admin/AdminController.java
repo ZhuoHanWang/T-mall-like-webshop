@@ -36,6 +36,7 @@ public class AdminController {
 
     @GetMapping({"/login"})
     public String login() {
+        // 返回的页面这里一定要有一个下划线，说明匹配到了写的页面
         return "admin/login";
     }
 
@@ -51,6 +52,7 @@ public class AdminController {
         return "admin/index";
     }
 
+    // 请求的地址必须是/admin/login，并且通过post提交的请求参数有userName,password verifycode
     @PostMapping(value = "/login")
     public String login(@RequestParam("userName") String userName,
                         @RequestParam("password") String password,
