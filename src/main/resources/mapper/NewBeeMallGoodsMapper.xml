@@ -23,7 +23,7 @@
     </resultMap>
     <sql id="Base_Column_List">
     goods_id, goods_name, goods_intro,goods_category_id, goods_cover_img, goods_carousel, original_price,
-    selling_price, stock_num, tag, goods_sell_status, create_user, create_time, update_user, 
+    selling_price, stock_num, tag, goods_sell_status, create_user, create_time, update_user,
     update_time
   </sql>
     <sql id="Blob_Column_List">

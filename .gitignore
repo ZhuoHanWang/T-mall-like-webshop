@@ -23,3 +23,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# 配置upload路径的文件
+src/main/java/ltd/newbee/mall/common/Constants.java
