@@ -4,10 +4,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.wangEditor = {}));
 })(this, (function (exports) { 'use strict';
 
-  /**
-   * @description browser polyfill
-   * @author wangfupeng
-   */
+
   var _a;
   // @ts-nocheck
   // 必须是浏览器环境
@@ -43,10 +40,6 @@
       }
   }
 
-  /**
-   * @description node polyfill
-   * @author wangfupeng
-   */
   // @ts-nocheck
   // 必须是 node 环境
   if (typeof global === 'object') {

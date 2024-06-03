@@ -154,11 +154,11 @@
 }
 
 #nav .banner_x .logo {
-    width: 240px;
+    width: 200px;
     text-indent: -10000px;
     background: url(../image/malllogo.png) no-repeat;
     background-size: 50%;
-    background-position: center;
+    background-position: left;
     margin-top: 10px;
 }
 

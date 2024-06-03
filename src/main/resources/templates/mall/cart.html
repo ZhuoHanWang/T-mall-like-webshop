@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>E-Mallix商城-购物车</title>
+    <link rel="shortcut icon" th:href="@{/mall/image/malllogo.png}"/>
     <link rel="stylesheet" th:href="@{mall/css/iconfont.css}">
     <link rel="stylesheet" th:href="@{mall/css/common.css}">
     <link rel="stylesheet" th:href="@{mall/styles/header.css}">
@@ -10,12 +11,12 @@
     <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert2/sweetalert2.min.css}"/>
 </head>
 <body>
-
+<header th:replace="mall/header::header-fragment"></header>
 <div id="cart">
     <div class="banner_x center">
         <a th:href="@{/index}" target="_blank">
             <div class="logo fl">
-                <img src="mall/image/new-bee-logo-3.png"/>
+                <img src="mall/image/malllogo.png"/>
             </div>
         </a>
 
