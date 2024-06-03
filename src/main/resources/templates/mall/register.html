@@ -1,20 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>NewBee商城-注册</title>
-    <link rel="stylesheet" th:href="@{mall/css/common.css}">
-    <link rel="stylesheet" th:href="@{mall/styles/login.css}">
-    <link rel="stylesheet" th:href="@{mall/styles/header.css}">
-    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert2/sweetalert2.min.css}"/>
+<head th:replace="mall/header::head-fragment('E-Mallix商城-注册','login')">
 </head>
 <body>
-<div class="top center">
-    <div class="logo center">
-        <a href="./index.html" target="_blank"><img src="mall/image/login-logo-2.png" alt=""></a>
-    </div>
-</div>
 
 <div class="form center">
     <div class="login">
@@ -27,19 +15,18 @@
             </div>
             <form id="registerForm" onsubmit="return false;" action="##">
                 <div class="login_main center">
-                    <div class="login-info">手机号:&nbsp;<input class="login-info-input" type="text" name="loginName"
-                                                             placeholder="请输入你的手机号" id="loginName"/>
+                    <div class="login-info">账&nbsp;&nbsp;&nbsp;&nbsp;号:&nbsp;<input class="login-info-input" type="text" name="loginName"
+                                                                                      id="loginName"
+                                                                                      placeholder="请输入你的手机号/邮箱"/>
                     </div>
-                    <div class="login-info">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="login-info-input"
-                                                                                    type="password"
-                                                                                    name="password"
-                                                                                    id="password"
-                                                                                    placeholder="请输入你的密码"/>
-                    </div>
+                    <div class="login-info">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="login-info-input" id="password"
+                                                                                      type="password"
+                                                                                      name="password"
+                                                                                      placeholder="请输入你的密码"/></div>
                     <div class="login-info">
-                        验证码:&nbsp;
-                        <input class="login-info-input verify-code" type="text" name="verifyCode" id="verifyCode"
-                               placeholder="请输入验证码"/>
+                        验证码:
+                        <input class="login-info-input verify-code" type="text" name="verifyCode"
+                               placeholder="请输入验证码" id="verifyCode"/>
                         <img alt="单击图片刷新！" style="top: 16px;position: relative;" th:src="@{/common/mall/kaptcha}"
                              onclick="this.src='/common/mall/kaptcha?d='+new Date()*1">
                     </div>
@@ -57,13 +44,12 @@
 <script th:src="@{/admin/dist/js/public.js}"></script>
 <script th:src="@{/admin/plugins/sweetalert2/sweetalert2.all.min.js}"></script>
 <script type="text/javascript">
-
     //注册按钮onclick事件改为register()即可
     function register() {
         var loginName = $("#loginName").val();
         if (!validPhoneNumber(loginName)) {
             Swal.fire({
-                text: "请输入正确的手机号/邮箱",
+                text: "请输入正确的手机号",
                 icon: "error",iconColor:"#f05b72",
             });
             return false;

@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>E-Mallix商城-登录</title>
-    <link rel="stylesheet" th:href="@{mall/css/common.css}">
-    <link rel="stylesheet" th:href="@{mall/styles/login.css}">
-    <link rel="stylesheet" th:href="@{mall/styles/header.css}">
-    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert2/sweetalert2.min.css}"/>
+<head th:replace="mall/header::head-fragment('E-Mallix商城-登录','login')">
 </head>
 <body>
 
@@ -25,11 +19,10 @@
                                                              id="loginName"
                                                              placeholder="请输入你的手机号/邮箱"/>
                     </div>
-                    <div class="login-info">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="login-info-input"
-     id="password"
-                                                                                    type="password"
-                                                                                    name="password"
-                                                                                    placeholder="请输入你的密码"/></div>
+                    <div class="login-info">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="login-info-input" id="password"
+                                                                                     type="password"
+                                                                                     name="password"
+                                                                                     placeholder="请输入你的密码"/></div>
                     <div class="login-info">
                         验证码:
                         <input class="login-info-input verify-code" type="text" name="verifyCode"
@@ -55,7 +48,7 @@
         var loginName = $("#loginName").val();
         if (!validPhoneNumber(loginName)) {
             Swal.fire({
-                text: "请输入正确的手机号/邮箱",
+                text: "请输入正确的手机号",
                 icon: "error",iconColor:"#f05b72",
             });
             return false;
