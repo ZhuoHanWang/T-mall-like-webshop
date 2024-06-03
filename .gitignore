@@ -1,7 +1,13 @@
+# 忽略 application.properties 文件
+application.properties
+
+# 忽略目标目录
 /target/
+
+# 保留 maven-wrapper.jar
 !.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
+### STS (Spring Tool Suite) ###
 .apt_generated
 .classpath
 .factorypath
@@ -24,5 +30,5 @@
 /nbdist/
 /.nb-gradle/
 
-# 配置upload路径的文件
+# 忽略上传路径的文件
 src/main/java/ltd/newbee/mall/common/Constants.java
