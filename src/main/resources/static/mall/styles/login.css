@@ -1,37 +1,25 @@
 body {
-    background: #14212a;
-}
-
-.top {
-    width: 100%;
-    height: 100px;
-    background: #fff;
-}
-
-.top .logo {
-    width: 1130px;
-    height: 160px;
-}
-
-.top .logo img {
-    border: none;
-    margin-top: -15px;
+    background-image: url("../image/login_bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* 保持图片完全覆盖背景 */
+    background-color: #fdfdff; /* 作为背景的颜色，图片不完全覆盖时显示 */
 }
 
 .form {
-    width: 1130px;
-    height: 588px;
-    background: url("../image/login_bg.png") no-repeat center center;
+    width: 90%;
+    height: calc(100vh - 100px);
 }
 
 .form .login {
     width: 400px;
     height: 470px;
     margin: 30px auto;
-    background: #444;
+    background: rgba(239, 234, 234, 0.5);
     color: #fff;
     margin-right: 0px;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
     font: 12px "宋体", Times New Roman;
 }
 
@@ -50,6 +38,7 @@ body {
 }
 
 .form .login .login_center .login_top .left {
+    color: #1baeae;
     height: 40px;
     line-height: 40px;
     font-weight: bold;
@@ -57,6 +46,7 @@ body {
 }
 
 .form .login .login_center .login_top .right {
+    color: #1baeae;
     height: 40px;
     line-height: 40px;
     font-size: 13px;
@@ -86,6 +76,7 @@ body {
 }
 
 .form .login .login_center .login-info {
+    color: #1baeae;
     font: 16px Times New Roman;
     height: 40px;
     line-height: 40px;

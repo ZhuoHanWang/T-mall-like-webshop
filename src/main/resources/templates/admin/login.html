@@ -1,13 +1,12 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>newbee-mall管理系统 | Log in</title>
+    <title>E-Mallix管理系统 | Log in</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" th:href="@{/admin/dist/img/favicon.ico}"/>
+    <link rel="shortcut icon" th:href="@{/mall/image/malllogo.png}"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" th:href="@{/admin/dist/css/font-awesome.min.css}">
     <!-- Ionicons -->
@@ -34,13 +33,13 @@
 </div>
 <div class="login-box">
     <div class="login-logo" style="color: #1baeae;">
-        <img th:src="@{/mall/image/new-bee-logo-3.png}" style="    height: 58px;float: left;margin-left: 10px;">
-        <h1>管理系统登陆</h1>
+        <img th:src="@{/mall/image/malllogo.png}" style="    height: 58px;float: left;margin-left: 10px;">
+        <h1>后台管理系统</h1>
     </div>
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg"> NewBee MALL , Let's Go !</p>
+            <p class="login-box-msg"> E-Mallix , Let's Go !</p>
             <form th:action="@{/admin/login}" method="post">
                 <div th:if="${not #strings.isEmpty(session.errorMsg)}" class="form-group">
                     <div class="alert alert-danger" th:text="${session.errorMsg}"></div>

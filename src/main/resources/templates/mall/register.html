@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -63,7 +63,7 @@
         var loginName = $("#loginName").val();
         if (!validPhoneNumber(loginName)) {
             Swal.fire({
-                text: "请输入正确的登录名(即手机号)",
+                text: "请输入正确的手机号/邮箱",
                 icon: "error",iconColor:"#f05b72",
             });
             return false;

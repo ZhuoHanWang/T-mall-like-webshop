@@ -1,7 +1,7 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="mall/header::head-fragment('NewBee商城-个人中心','personal')">
+<head th:replace="mall/header::head-fragment('E-Mallix商城-个人中心','personal')">
 </head>
 <link th:href="@{/mall/css/bootstrap-modal.css}" rel="stylesheet">
 <body>
@@ -99,7 +99,7 @@
     //绑定modal上的保存按钮
     $('#saveButton').click(function () {
         var address = $("#address").val();
-        if (address.trim().length < 10) {
+        if (address.trim().length < 1) {
             Swal.fire({
                 text: "请输入正确的收货信息",
                 icon: "error",iconColor:"#f05b72",
@@ -107,7 +107,7 @@
             return;
         }
         var introduceSign = $("#introduceSign").val();
-        if (introduceSign.trim().length < 4) {
+        if (introduceSign.trim().length < 1) {
             Swal.fire({
                 text: "请输入正确的个性签名",
                 icon: "error",iconColor:"#f05b72",

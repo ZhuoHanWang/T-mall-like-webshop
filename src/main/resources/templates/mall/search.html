@@ -1,7 +1,7 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="mall/header::head-fragment('NewBee商城-搜索','search')">
+<head th:replace="mall/header::head-fragment('E-Mallix商城-搜索','search')">
 </head>
 <body>
 <header th:replace="mall/header::header-fragment"></header>
@@ -14,7 +14,7 @@
         <div class="category_bar">
             <th:block th:if="${searchPageCategoryVO!=null}">
                 <div class="fm c">
-                    <a href="##" class="qqq" th:text="${searchPageCategoryVO.secondLevelCategoryName}">newbee-mall</a>
+                    <a href="##" class="qqq" th:text="${searchPageCategoryVO.secondLevelCategoryName}">E-Mallix</a>
                     <div>
                         <th:block th:each="thirdLevelCategory : ${searchPageCategoryVO.thirdLevelCategoryList}">
                             <a th:href="@{${'/search?goodsCategoryId='+thirdLevelCategory.categoryId}}"
@@ -22,12 +22,13 @@
                         </th:block>
                     </div>
                 </div>
-                <i><img src="mall/image/right-@1x.png" alt=""></i>
+                <i><img src="/mall/image/right-@1x.png" alt=""></i>
                 <div class="findword">"
                     <th:block th:text="${searchPageCategoryVO.currentCategoryName}"></th:block>
                     "
                 </div>
             </th:block>
+
             <th:block th:if="${searchPageCategoryVO==null}">
                 <th:block th:if="${keyword!=null and keyword !=''}">
                     <div class="findword">搜索 "
