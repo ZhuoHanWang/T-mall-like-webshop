@@ -10,12 +10,14 @@ import ltd.newbee.mall.service.NewBeeMallUserService;
 import ltd.newbee.mall.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
+@Transactional
 public class NewBeeMallUserServiceImpl implements NewBeeMallUserService {
 
     @Autowired

@@ -16,6 +16,7 @@ import ltd.newbee.mall.util.PageQueryUtil;
 import ltd.newbee.mall.util.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@Transactional
 public class NewBeeMallGoodsServiceImpl implements NewBeeMallGoodsService {
 
     @Autowired

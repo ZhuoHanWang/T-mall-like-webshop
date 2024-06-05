@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 import static java.util.stream.Collectors.groupingBy;
 
 @Service
+@Transactional
 public class NewBeeMallOrderServiceImpl implements NewBeeMallOrderService {
 
     @Autowired

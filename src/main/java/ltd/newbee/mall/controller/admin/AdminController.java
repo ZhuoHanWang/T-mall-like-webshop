@@ -60,6 +60,7 @@ public class AdminController {
         }
         AdminUser adminUser = adminUserService.login(userName, password);
         if (adminUser != null) {
+            //数据库中查询到了管理员信息记录
             session.setAttribute("loginUser", adminUser.getNickName());
             session.setAttribute("loginUserId", adminUser.getAdminUserId());
             //session过期时间设置为7200秒 即两小时
