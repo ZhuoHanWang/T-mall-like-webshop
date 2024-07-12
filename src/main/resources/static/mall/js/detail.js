@@ -1,4 +1,4 @@
-var newbeeSwiper = new Swiper('.swiper-container', {
+var EmallixSwiper = new Swiper('.swiper-container', {
     //设置自动播放
     autoplay: {
         delay: 3000,

@@ -72,7 +72,7 @@
                                             <td class="col col-name">
                                                 <p class="name">
                                                     <a target="_blank" th:href="@{'/goods/detail/'+${item.goodsId}}"
-                                                       th:text="${item.goodsName}">newbee</a>
+                                                       th:text="${item.goodsName}">Emallix</a>
                                                 </p>
                                             </td>
                                             <td class="col col-price"><p class="price"
@@ -92,7 +92,7 @@
                                     <tr>
                                         <th>收货地址：</th>
                                         <td class="user_address_label"
-                                            th:text="${session.newBeeMallUser.address==''?'无':session.newBeeMallUser.address}">
+                                            th:text="${session.EmallixMallUser.address==''?'无':session.EmallixMallUser.address}">
                                             E-Mallix
                                         </td>
                                     </tr>
@@ -152,10 +152,10 @@
                     <div class="modal-body">
                         <form id="personalInfoForm">
                             <div class="form-group">
-                                <input type="hidden" id="userId" th:value="${session.newBeeMallUser.userId}">
+                                <input type="hidden" id="userId" th:value="${session.EmallixMallUser.userId}">
                                 <label for="address" class="control-label">收货地址:</label>
                                 <input type="text" class="form-control" id="address" name="address"
-                                       placeholder="请输入收货地址" th:value="${session.newBeeMallUser.address}"
+                                       placeholder="请输入收货地址" th:value="${session.EmallixMallUser.address}"
                                        required="true">
                             </div>
                         </form>

@@ -409,13 +409,13 @@ a {
     line-height: 28px;
 }
 
-.newbee-pagenavi {
+.Emallix-pagenavi {
     height: 30px;
     padding: 15px 0;
     text-align: center;
 }
 
-.newbee-pagenavi .numbers {
+.Emallix-pagenavi .numbers {
     display: inline-block;
     *zoom: 1;
     *display: inline;
@@ -429,22 +429,22 @@ a {
     color: #b0b0b0;
 }
 
-.newbee-pagenavi .iconfont {
+.Emallix-pagenavi .iconfont {
     font-size: 24px;
     vertical-align: bottom;
 }
 
-.newbee-pagenavi .current {
+.Emallix-pagenavi .current {
     background-color: #757575;
     color: #fff;
 }
 
-.newbee-pagenavi a.numbers {
+.Emallix-pagenavi a.numbers {
     -webkit-transition: all .2s linear;
     transition: all .2s linear
 }
 
-.newbee-pagenavi a.numbers:hover {
+.Emallix-pagenavi a.numbers:hover {
     background: #b0b0b0;
     color: #fff
 }

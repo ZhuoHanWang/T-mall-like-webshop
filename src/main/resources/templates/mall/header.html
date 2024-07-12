@@ -32,7 +32,7 @@
             <li><a th:href="@{/admin}">后台管理系统</a></li>
         </ul>
         <div class="fr">
-            <th:block th:unless="${session.newBeeMallUser==null}">
+            <th:block th:unless="${session.EmallixMallUser==null}">
                 <div class="user">
                     <ul class="selector">
                         <li>
@@ -52,18 +52,18 @@
                         </li>
                     </ul>
                     <a href="##" class="username">
-                        <th:block th:text="${session.newBeeMallUser.nickName}"></th:block>
+                        <th:block th:text="${session.EmallixMallUser.nickName}"></th:block>
                         <i class="iconfont icon-down"></i>
                     </a>
                 </div>
                 <div class="shopcart">
                     <a th:href="@{/shop-cart}" style="color: white;"><i class="iconfont icon-cart"></i>
                         购物车(
-                        <th:block th:text="${session.newBeeMallUser.shopCartItemCount}"></th:block>
+                        <th:block th:text="${session.EmallixMallUser.shopCartItemCount}"></th:block>
                         )</a>
                 </div>
             </th:block>
-            <th:block th:if="${session.newBeeMallUser==null}">
+            <th:block th:if="${session.EmallixMallUser==null}">
                 <ul class="login">
                     <li><a th:href="@{/login}">登录</a></li>
                     <li><a th:href="@{/register}">注册</a></li>

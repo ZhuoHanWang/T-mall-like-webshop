@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="ltd.newbee.mall.dao.CarouselMapper">
-    <resultMap id="BaseResultMap" type="ltd.newbee.mall.entity.Carousel">
+<mapper namespace="ltd.Emallix.mall.dao.CarouselMapper">
+    <resultMap id="BaseResultMap" type="ltd.Emallix.mall.entity.Carousel">
         <id column="carousel_id" jdbcType="INTEGER" property="carouselId"/>
         <result column="carousel_url" jdbcType="VARCHAR" property="carouselUrl"/>
         <result column="redirect_url" jdbcType="VARCHAR" property="redirectUrl"/>
@@ -19,7 +19,7 @@
     <select id="findCarouselList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_carousel
+        from tb_Emallix_mall_carousel
         where is_deleted = 0
         order by carousel_rank desc
         <if test="start!=null and limit!=null">
@@ -27,29 +27,29 @@
         </if>
     </select>
     <select id="getTotalCarousels" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_carousel
+        select count(*) from tb_Emallix_mall_carousel
         where is_deleted = 0
     </select>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_carousel
+        from tb_Emallix_mall_carousel
         where carousel_id = #{carouselId,jdbcType=INTEGER}
     </select>
     <select id="findCarouselsByNum" parameterType="int" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_carousel
+        from tb_Emallix_mall_carousel
         where is_deleted = 0
         order by carousel_rank desc
         limit #{number}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from tb_newbee_mall_carousel
+    delete from tb_Emallix_mall_carousel
     where carousel_id = #{carouselId,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="ltd.newbee.mall.entity.Carousel">
-    insert into tb_newbee_mall_carousel (carousel_id, carousel_url, redirect_url, 
+    <insert id="insert" parameterType="ltd.Emallix.mall.entity.Carousel">
+    insert into tb_Emallix_mall_carousel (carousel_id, carousel_url, redirect_url,
       carousel_rank, is_deleted, create_time, 
       create_user, update_time, update_user
       )
@@ -58,8 +58,8 @@
       #{createUser,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=INTEGER}
       )
   </insert>
-    <insert id="insertSelective" parameterType="ltd.newbee.mall.entity.Carousel">
-        insert into tb_newbee_mall_carousel
+    <insert id="insertSelective" parameterType="ltd.Emallix.mall.entity.Carousel">
+        insert into tb_Emallix_mall_carousel
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="carouselId != null">
                 carousel_id,
@@ -119,8 +119,8 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="ltd.newbee.mall.entity.Carousel">
-        update tb_newbee_mall_carousel
+    <update id="updateByPrimaryKeySelective" parameterType="ltd.Emallix.mall.entity.Carousel">
+        update tb_Emallix_mall_carousel
         <set>
             <if test="carouselUrl != null">
                 carousel_url = #{carouselUrl,jdbcType=VARCHAR},
@@ -149,8 +149,8 @@
         </set>
         where carousel_id = #{carouselId,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="ltd.newbee.mall.entity.Carousel">
-    update tb_newbee_mall_carousel
+    <update id="updateByPrimaryKey" parameterType="ltd.Emallix.mall.entity.Carousel">
+    update tb_Emallix_mall_carousel
     set carousel_url = #{carouselUrl,jdbcType=VARCHAR},
       redirect_url = #{redirectUrl,jdbcType=VARCHAR},
       carousel_rank = #{carouselRank,jdbcType=INTEGER},
@@ -162,7 +162,7 @@
     where carousel_id = #{carouselId,jdbcType=INTEGER}
   </update>
     <update id="deleteBatch">
-        update tb_newbee_mall_carousel
+        update tb_Emallix_mall_carousel
         set is_deleted=1,update_time=now() where carousel_id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}

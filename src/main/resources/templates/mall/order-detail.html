@@ -51,14 +51,14 @@
 
                                 <div class="order-summary">
                                     <div class="order-status" th:text="${orderDetailVO.orderStatusString}">
-                                        newbee
+                                        Emallix
                                     </div>
                                     <div class="order-desc">
                                         <th:block th:if="${orderDetailVO.orderStatus==0}">请尽快完成支付哦~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==1}">newbee商城订单确认中~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==2}">newbee仓库正在紧急配货中~</th:block>
+                                        <th:block th:if="${orderDetailVO.orderStatus==1}">Emallix商城订单确认中~</th:block>
+                                        <th:block th:if="${orderDetailVO.orderStatus==2}">Emallix仓库正在紧急配货中~</th:block>
                                         <th:block th:if="${orderDetailVO.orderStatus==3}">订单已出库正在快马加鞭向您奔来~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==4}">交易成功，感谢您对newbee商城的支持~
+                                        <th:block th:if="${orderDetailVO.orderStatus==4}">交易成功，感谢您对Emallix商城的支持~
                                         </th:block>
                                         <th:block th:if="${orderDetailVO.orderStatus<0}">交易已关闭~</th:block>
 
@@ -131,7 +131,7 @@
                                 </div>
                                 <table class="order-items-table">
                                     <tbody>
-                                    <th:block th:each="item : ${orderDetailVO.newBeeMallOrderItemVOS}">
+                                    <th:block th:each="item : ${orderDetailVO.EmallixMallOrderItemVOS}">
                                         <tr>
                                             <td class="col col-thumb">
                                                 <div class="figure figure-thumb">
@@ -144,7 +144,7 @@
                                             <td class="col col-name">
                                                 <p class="name">
                                                     <a target="_blank" th:href="@{'/goods/detail/'+${item.goodsId}}"
-                                                       th:text="${item.goodsName}">newbee</a>
+                                                       th:text="${item.goodsName}">Emallix</a>
                                                 </p>
                                             </td>
                                             <td class="col col-price"><p class="price"
@@ -162,7 +162,7 @@
                                 <table class="info-table">
                                     <tbody>
                                     <tr>
-                                        <td th:text="${orderDetailVO.userAddress}">newbee</td>
+                                        <td th:text="${orderDetailVO.userAddress}">Emallix</td>
                                     </tr>
                                     </tbody>
                                 </table>

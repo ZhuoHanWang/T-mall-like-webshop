@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="ltd.newbee.mall.dao.GoodsCategoryMapper">
-    <resultMap id="BaseResultMap" type="ltd.newbee.mall.entity.GoodsCategory">
+<mapper namespace="ltd.Emallix.mall.dao.GoodsCategoryMapper">
+    <resultMap id="BaseResultMap" type="ltd.Emallix.mall.entity.GoodsCategory">
         <id column="category_id" jdbcType="BIGINT" property="categoryId"/>
         <result column="category_level" jdbcType="TINYINT" property="categoryLevel"/>
         <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
@@ -20,7 +20,7 @@
     <select id="findGoodsCategoryList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from tb_Emallix_mall_goods_category
         <where>
             <if test="categoryLevel!=null and categoryLevel!=''">
                 and category_level = #{categoryLevel}
@@ -36,7 +36,7 @@
         </if>
     </select>
     <select id="getTotalGoodsCategories" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_goods_category
+        select count(*) from tb_Emallix_mall_goods_category
         <where>
             <if test="categoryLevel!=null and categoryLevel!=''">
                 and category_level = #{categoryLevel}
@@ -50,20 +50,20 @@
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from tb_Emallix_mall_goods_category
         where category_id = #{categoryId,jdbcType=BIGINT} and is_deleted=0
     </select>
     <select id="selectByLevelAndName" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from tb_Emallix_mall_goods_category
         where category_name = #{categoryName,jdbcType=VARCHAR} and category_level = #{categoryLevel,jdbcType=TINYINT}
         and is_deleted = 0 limit 1
     </select>
     <select id="selectByLevelAndParentIdsAndNumber" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from tb_Emallix_mall_goods_category
         where parent_id in
         <foreach item="parentId" collection="parentIds" open="(" separator="," close=")">
             #{parentId,jdbcType=BIGINT}
@@ -76,18 +76,18 @@
         </if>
     </select>
     <update id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    update tb_newbee_mall_goods_category set is_deleted=1
+    update tb_Emallix_mall_goods_category set is_deleted=1
     where category_id = #{categoryId,jdbcType=BIGINT} and is_deleted=0
   </update>
     <update id="deleteBatch">
-        update tb_newbee_mall_goods_category
+        update tb_Emallix_mall_goods_category
         set is_deleted=1 where category_id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>
     </update>
-    <insert id="insert" parameterType="ltd.newbee.mall.entity.GoodsCategory">
-    insert into tb_newbee_mall_goods_category (category_id, category_level, parent_id, 
+    <insert id="insert" parameterType="ltd.Emallix.mall.entity.GoodsCategory">
+    insert into tb_Emallix_mall_goods_category (category_id, category_level, parent_id,
       category_name, category_rank, is_deleted, 
       create_time, create_user, update_time, 
       update_user)
@@ -96,8 +96,8 @@
       #{createTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{updateUser,jdbcType=INTEGER})
   </insert>
-    <insert id="insertSelective" parameterType="ltd.newbee.mall.entity.GoodsCategory">
-        insert into tb_newbee_mall_goods_category
+    <insert id="insertSelective" parameterType="ltd.Emallix.mall.entity.GoodsCategory">
+        insert into tb_Emallix_mall_goods_category
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="categoryId != null">
                 category_id,
@@ -163,8 +163,8 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="ltd.newbee.mall.entity.GoodsCategory">
-        update tb_newbee_mall_goods_category
+    <update id="updateByPrimaryKeySelective" parameterType="ltd.Emallix.mall.entity.GoodsCategory">
+        update tb_Emallix_mall_goods_category
         <set>
             <if test="categoryLevel != null">
                 category_level = #{categoryLevel,jdbcType=TINYINT},
@@ -196,8 +196,8 @@
         </set>
         where category_id = #{categoryId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="ltd.newbee.mall.entity.GoodsCategory">
-    update tb_newbee_mall_goods_category
+    <update id="updateByPrimaryKey" parameterType="ltd.Emallix.mall.entity.GoodsCategory">
+    update tb_Emallix_mall_goods_category
     set category_level = #{categoryLevel,jdbcType=TINYINT},
       parent_id = #{parentId,jdbcType=BIGINT},
       category_name = #{categoryName,jdbcType=VARCHAR},
